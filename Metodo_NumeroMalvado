@@ -1,0 +1,28 @@
+static String numero_malvado(int numero){ // este metodo recibe un entero y dice si es malvado o no
+            
+            boolean malvado = false;
+            
+            String n = Integer.toBinaryString(numero);
+            
+            String arreglo[] = new String[n.length()];
+        
+            String aux = null;
+
+            for (int i = 0; i < n.length(); i++) {
+
+                arreglo[i] = ""+n.charAt(i);
+
+                if(i>=1){
+                    if(arreglo[i].equals("1") && arreglo[i].equals(aux)){
+                        malvado = true;
+                    }else{
+                    }
+                }
+                aux = arreglo[i];
+            }
+            
+            if(malvado){
+                return n+" Es un numero malvado";
+            }else
+                return n+" No es malvado";
+        }
